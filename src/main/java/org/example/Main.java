@@ -1,28 +1,28 @@
 package org.example;
 
 import java.util.Locale;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-        double x = 10.35784;
-        String nome = "maria";
-        int idade  = 36;
-        double renda = 4000.0;
-
-
-        System.out.print("print doesn't break lines %n");
-        System.out.println(" but println breaks!");
-
-        System.out.println(x);
-        System.out.printf("%.2f%n", x);
-        System.out.printf("%.4f%n", x);
         Locale.setDefault(Locale.US);
-        System.out.printf("%.4f%n", x);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println("RESULTADO = " + x + " METROS");
-        System.out.printf("RESULTADO = %.2f METROS%n", x);
-        System.out.printf("%s, tem %d anos e ganha R$%.2f reais%n", nome, idade, renda);
-        System.out.println(nome + " ,tem " + idade + " anos e ganha R$" + renda + " reais");
+        int a;
+        String x;
+        double b;
+
+        //sc.next(); one word only
+        //sc.nextLine();  that'll read the whole line
+        x = sc.next();
+        System.out.println("Você digitou: " + x);
+
+
+        a = sc.nextInt();
+        System.out.println("você digitou: " + a);
+
+        b = sc.nextDouble();
+        System.out.println("você digitou: " + b);
+        sc.close();
     }
 }
